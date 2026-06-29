@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bima Indonesia — PT. Bima Life Future | #BeAWinner</title>
+<meta name="description" content="Bima Smarter Future — Produk premium pertanian, kesehatan, dan peternakan. #Be A Winner">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-900: #0b2618;
+  --green-800: #143d2a;
+  --green-700: #1a5738;
+  --green-600: #1f7048;
+  --green-500: #27865a;
+  --green-400: #3ba875;
+  --green-300: #6fc99a;
+  --green-200: #b4e2c9;
+  --green-100: #e3f5eb;
+  --green-50:  #f3fbf6;
+  --gold-700:  #7a5a10;
+  --gold-600:  #a57d15;
+  --gold-500:  #d4a01f;
+  --gold-400:  #e8b93a;
+  --gold-300:  #f1cd5d;
+  --gold-200:  #f7df92;
+  --gold-100:  #fdf3d0;
+  --ink:       #0f1a14;
+  --ink-soft:  #2d3e33;
+  --muted:     #6b7d71;
+  --line:      #dbe5dd;
+  --paper:     #ffffff;
+  --cream:     #fbfaf5;
+  --danger:    #c0392b;
+  --radius-sm: 6px;
+  --radius:    12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow-sm: 0 2px 8px rgba(15,26,20,.06);
+  --shadow:    0 10px 30px rgba(15,26,20,.08);
+  --shadow-lg: 0 20px 60px rgba(15,26,20,.12);
+  --shadow-gold: 0 10px 40px rgba(212,160,31,.18);
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+  --ease:  cubic-bezier(.2,.8,.2,1);
+}
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 48px; }
+.section { padding: 96px 0; }
+.section-sm { padding: 64px 0; }
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  content: ''; width: 24px; height: 1px; background: var(--gold-500);
+}
+h1,h2,h3,h4 { font-family: var(--serif); color: var(--green-900); line-height: 1.15; letter-spacing: -.01em; }
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 700; }
+h2 { font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 700; }
+h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); font-weight: 600; }
+p { color: var(--ink-soft); }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px;
+  font-weight: 600; font-size: 14px; letter-spacing: .02em;
+  border-radius: 999px;
+  transition: all .3s var(--ease);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--green-600), var(--green-700));
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(31,112,72,.28);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(31,112,72,.38); }
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+  color: var(--green-900);
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 16px 46px rgba(212,160,31,.3); }
+.btn-outline {
+  border: 1.5px solid var(--green-700);
+  color: var(--green-800);
+  background: transparent;
+}
+.btn-outline:hover { background: var(--green-800); color: #fff; }
+.btn-sm { padding: 10px 20px; font-size: 13px; }
+
+/* ============ NAV ============ */
+.nav-wrap {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid var(--line);
+  transition: all .3s var(--ease);
+}
+.nav-wrap.scrolled { box-shadow: var(--shadow-sm); }
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 76px;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-img { height: 56px; width: auto; }
+.logo-mark {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-600), var(--green-800));
+  display: grid; place-items: center;
+  color: var(--gold-300); font-family: var(--serif); font-weight: 700; font-size: 20px;
+  box-shadow: inset 0 0 0 1.5px rgba(212,160,31,.4);
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-text strong { font-family: var(--serif); font-size: 17px; color: var(--green-900); letter-spacing: .02em; }
+.logo-text span { font-size: 10px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-600); font-weight: 600; }
+.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+.nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--ink-soft);
+  position: relative; padding: 8px 0;
+  transition: color .2s;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: var(--gold-500); transform: scaleX(0); transform-origin: right;
+  transition: transform .3s var(--ease);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--green-800); }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); transform-origin: left; }
+.dropdown { position: relative; }
+.dropdown-toggle { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.dropdown-toggle svg { width: 12px; height: 12px; transition: transform .2s; }
+.dropdown:hover .dropdown-toggle svg { transform: rotate(180deg); }
+.dropdown-menu {
+  position: absolute; top: calc(100% + 14px); left: -20px;
+  min-width: 240px;
+  background: #fff; border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 10px;
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: all .25s var(--ease);
+  list-style: none;
+}
+.dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border-radius: 8px;
+  font-size: 13.5px;
+}
+.dropdown-menu a:hover { background: var(--green-50); }
+.dropdown-menu .dm-cat {
+  font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--gold-600); font-weight: 600; margin-left: auto;
+}
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.cart-btn {
+  position: relative;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--green-50);
+  color: var(--green-800);
+  transition: all .2s;
+}
+.cart-btn:hover { background: var(--green-100); }
+.cart-count {
+  position: absolute; top: -4px; right: -4px;
+  min-width: 20px; height: 20px; border-radius: 10px;
+  background: var(--gold-500); color: var(--green-900);
+  font-size: 11px; font-weight: 700;
+  display: grid; place-items: center;
+  padding: 0 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+.menu-toggle { display: none; width: 44px; height: 44px; border-radius: 10px; }
+.menu-toggle span {
+  display: block; width: 22px; height: 2px; background: var(--green-900);
+  margin: 5px auto; transition: all .3s;
+}
+
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  background:
+    radial-gradient(1200px 500px at 85% 20%, rgba(212,160,31,.12), transparent 60%),
+    radial-gradient(900px 600px at 10% 80%, rgba(39,134,90,.10), transparent 60%),
+    linear-gradient(180deg, var(--green-50) 0%, #fff 100%);
+  overflow: hidden;
+  display: flex; align-items: center;
+  padding: 60px 0;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(212,160,31,.08) 0 1px, transparent 1px),
+    radial-gradient(circle at 70% 60%, rgba(31,112,72,.06) 0 1px, transparent 1px);
+  background-size: 40px 40px, 60px 60px;
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px;
+  align-items: center;
+  position: relative; z-index: 1;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 16px 8px 8px;
+  background: #fff; border: 1px solid var(--gold-200);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 28px;
+  font-size: 13px; color: var(--ink-soft);
+}
+.hero-badge .dot {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--gold-100); color: var(--gold-700);
+  display: grid; place-items: center; font-size: 13px;
+}
+.hero h1 { margin: 18px 0 22px; }
+.hero h1 em {
+  font-style: italic; color: var(--gold-600);
+  background: linear-gradient(180deg, transparent 55%, var(--gold-100) 55%);
+  padding: 0 6px;
+}
+.hero-sub { font-size: 17px; color: var(--muted); max-width: 520px; margin-bottom: 36px; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.hero-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  padding-top: 32px; border-top: 1px solid var(--line);
+  max-width: 520px;
+}
+.hero-stat strong {
+  font-family: var(--serif); font-size: 30px; color: var(--green-800);
+  display: block; line-height: 1;
+}
+.hero-stat span { font-size: 12px; color: var(--muted); letter-spacing: .06em; }
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.hero-visual img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.hero-float {
+  position: absolute;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-float.tl { top: 30px; left: -30px; }
+.hero-float.br { bottom: 40px; right: -30px; }
+.hero-float-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: grid; place-items: center;
+  background: var(--green-100); color: var(--green-800);
+}
+.hero-float strong { font-size: 14px; display: block; color: var(--green-900); }
+.hero-float span { font-size: 11px; color: var(--muted); }
+
+/* ============ PRODUCT SHOWCASE ============ */
+.showcase-head { text-align: center; margin-bottom: 56px; }
+.showcase-head h2 { margin: 14px 0 16px; }
+.showcase-head p { color: var(--muted); max-width: 620px; margin: 0 auto; }
+.products-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all .35s var(--ease);
+  position: relative;
+  display: flex; flex-direction: column;
+}
+.product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--green-200); }
+.product-img {
+  position: relative;
+  overflow: hidden;
+  background: var(--green-50);
+}
+.product-img img { width: 100%; height: auto; object-fit: contain; transition: transform .6s var(--ease); }
+.product-card:hover .product-img img { transform: scale(1.06); }
+.product-tag {
+  position: absolute; top: 14px; left: 14px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+  padding: 5px 12px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--green-800);
+}
+.product-tag.gold { background: var(--gold-500); color: var(--green-900); }
+.product-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.product-cat {
+  font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold-600); font-weight: 600;
+}
+.product-body h3 { font-size: 1.25rem; margin: 0; }
+.product-desc { font-size: 13.5px; color: var(--muted); flex: 1; }
+.product-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 14px; border-top: 1px solid var(--line);
+  margin-top: 10px;
+}
+.product-price { font-family: var(--serif); font-weight: 700; color: var(--green-800); font-size: 18px; }
+.product-price span { font-size: 12px; color: var(--muted); font-weight: 400; font-family: var(--sans); }
+.add-cart-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--green-800); color: #fff;
+  display: grid; place-items: center;
+  transition: all .2s;
+}
+.add-cart-btn:hover { background: var(--gold-500); color: var(--green-900); transform: rotate(90deg); }
+
+/* ============ FEATURES STRIP ============ */
+.features-strip {
+  background: var(--green-900);
+  color: #fff;
+  padding: 54px 0;
+  position: relative;
+  overflow: hidden;
+}
+.features-strip::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(800px 200px at 50% 100%, rgba(212,160,31,.15), transparent);
+}
+.features-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
+  position: relative; z-index: 1;
+}
+.feature-item { display: flex; gap: 16px; align-items: flex-start; }
+.feature-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+  color: var(--green-900);
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.feature-item h4 { color: #fff; font-family: var(--sans); font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.feature-item p { color: rgba(255,255,255,.65); font-size: 13px; line-height: 1.5; }
+
+/* ============ TESTIMONIALS ============ */
+.testi-section { background: var(--cream); }
+.testi-head { text-align: center; margin-bottom: 56px; }
+.testi-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.testi-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--line);
+  position: relative;
+  transition: all .3s var(--ease);
+}
+.testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.testi-card::before {
+  content: '"'; position: absolute; top: 10px; right: 24px;
+  font-family: var(--serif); font-size: 90px; line-height: 1;
+  color: var(--gold-200);
+}
+.testi-stars { color: var(--gold-500); font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+.testi-text { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 22px; font-style: italic; position: relative; z-index: 1; }
+.testi-person { display: flex; align-items: center; gap: 12px; }
+.testi-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-500), var(--green-700));
+  color: #fff; display: grid; place-items: center;
+  font-weight: 700; font-family: var(--serif);
+}
+.testi-person strong { display: block; color: var(--green-900); font-size: 14px; }
+.testi-person span { font-size: 12px; color: var(--muted); }
+
+/* ============ CTA BANNER ============ */
+.cta-banner {
+  background:
+    radial-gradient(800px 300px at 20% 50%, rgba(212,160,31,.18), transparent),
+    linear-gradient(135deg, var(--green-800), var(--green-900));
+  color: #fff;
+  border-radius: var(--radius-xl);
+  padding: 64px;
+  display: grid; grid-template-columns: 1.3fr .7fr; gap: 40px; align-items: center;
+  margin: 0 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.cta-banner h2 { color: #fff; }
+.cta-banner p { color: rgba(255,255,255,.75); margin: 16px 0 28px; }
+.cta-banner .btn-gold { align-self: flex-start; }
+
+/* ============ CATALOG PAGE ============ */
+.catalog-hero {
+  background: linear-gradient(135deg, var(--green-50), var(--cream));
+  padding: 80px 0 40px;
+  text-align: center;
+}
+.catalog-hero h1 { margin-bottom: 14px; }
+.catalog-hero p { color: var(--muted); max-width: 600px; margin: 0 auto; }
+.catalog-filters {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+  margin-top: 32px;
+}
+.filter-btn {
+  padding: 10px 20px; border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff; color: var(--ink-soft);
+  font-size: 13px; font-weight: 500;
+  transition: all .2s;
+}
+.filter-btn.active, .filter-btn:hover {
+  background: var(--green-800); color: #fff; border-color: var(--green-800);
+}
+.catalog-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;
+  padding: 60px 0;
+}
+.catalog-card {
+  display: grid; grid-template-columns: .9fr 1.1fr;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: all .3s var(--ease);
+}
+.catalog-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.catalog-card-img { overflow: hidden; background: var(--green-50); }
+.catalog-card-img img { width: 100%; height: auto; object-fit: contain; transition: transform .6s; }
+.catalog-card:hover .catalog-card-img img { transform: scale(1.05); }
+.catalog-card-body { padding: 32px; display: flex; flex-direction: column; }
+.catalog-card-body .product-cat { margin-bottom: 10px; }
+.catalog-card-body h3 { margin-bottom: 14px; font-size: 1.5rem; }
+.catalog-card-body p { font-size: 14px; margin-bottom: 18px; }
+.benefits-list { list-style: none; margin-bottom: 22px; }
+.benefits-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 6px 0; font-size: 13.5px; color: var(--ink-soft);
+}
+.benefits-list li::before {
+  content: ''; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--green-100) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' fill='none'%3E%3Cpath d='M1 4l3 3 5-6' stroke='%231a5738' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  flex-shrink: 0; margin-top: 2px;
+}
+.catalog-card-foot {
+  margin-top: auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 18px; border-top: 1px solid var(--line);
+}
+.catalog-card-foot .product-price { font-size: 22px; }
+
+/* ============ PRODUCT DETAIL ============ */
+.pd-wrap { padding: 50px 0 80px; }
+.pd-back { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-bottom: 30px; cursor: pointer; }
+.pd-back:hover { color: var(--green-800); }
+.pd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start; }
+.pd-gallery {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--green-50);
+  position: sticky; top: 100px;
+}
+.pd-info .product-cat { margin-bottom: 12px; }
+.pd-info h1 { font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 14px; }
+.pd-rating { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 13px; color: var(--muted); }
+.pd-rating .stars { color: var(--gold-500); letter-spacing: 2px; }
+.pd-price-row {
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.pd-price-row .product-price { font-size: 32px; }
+.pd-price-row .original { font-size: 16px; text-decoration: line-through; color: var(--muted); }
+.pd-desc { font-size: 15px; margin-bottom: 26px; line-height: 1.7; }
+.pd-benefits { margin-bottom: 30px; }
+.pd-benefits h4 { font-family: var(--sans); font-size: 13px; letter-spacing: .15em; text-transform: uppercase; color: var(--green-800); margin-bottom: 12px; }
+.pd-qty { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+.pd-qty label { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+.qty-ctrl { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.qty-ctrl button { width: 40px; height: 40px; font-size: 18px; color: var(--ink-soft); }
+.qty-ctrl button:hover { background: var(--green-50); }
+.qty-ctrl input { width: 50px; text-align: center; border: none; font-size: 15px; font-weight: 600; }
+.pd-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 30px; }
+.pd-meta {
+  background: var(--green-50); border-radius: var(--radius);
+  padding: 20px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+}
+.pd-meta-item { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; }
+.pd-meta-item svg { color: var(--green-600); flex-shrink: 0; margin-top: 2px; }
+.pd-meta-item strong { display: block; color: var(--green-900); }
+.pd-meta-item span { color: var(--muted); font-size: 12px; }
+
+/* ============ CART DRAWER ============ */
+.cart-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(11,38,24,.5);
+  backdrop-filter: blur(4px);
+  opacity: 0; visibility: hidden;
+  transition: all .3s var(--ease);
+}
+.cart-overlay.open { opacity: 1; visibility: visible; }
+.cart-drawer {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 201;
+  width: min(460px, 94vw);
+  background: #fff;
+  box-shadow: -20px 0 60px rgba(0,0,0,.18);
+  transform: translateX(100%);
+  transition: transform .4s var(--ease);
+  display: flex; flex-direction: column;
+}
+.cart-drawer.open { transform: translateX(0); }
+.cart-header {
+  padding: 24px 28px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.cart-header h3 { font-size: 20px; }
+.cart-close { width: 38px; height: 38px; border-radius: 50%; background: var(--green-50); color: var(--green-800); display: grid; place-items: center; }
+.cart-items { flex: 1; overflow-y: auto; padding: 12px 28px; }
+.cart-item {
+  display: grid; grid-template-columns: 80px 1fr auto;
+  gap: 16px; padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+.cart-item-img { width: 80px; height: 80px; border-radius: 10px; overflow: hidden; background: var(--green-50); }
+.cart-item-img img { width: 100%; height: 100%; object-fit: cover; }
+.cart-item-info h4 { font-family: var(--sans); font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--green-900); }
+.cart-item-info span { font-size: 12px; color: var(--muted); }
+.cart-item-qty { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; }
+.cart-item-qty button { width: 24px; height: 24px; border-radius: 50%; background: var(--green-50); font-size: 13px; color: var(--green-800); }
+.cart-item-qty span { font-size: 13px; font-weight: 600; min-width: 20px; text-align: center; }
+.cart-item-right { text-align: right; display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+.cart-item-right strong { font-family: var(--serif); font-size: 15px; color: var(--green-800); }
+.cart-item-remove { font-size: 11px; color: var(--muted); text-decoration: underline; }
+.cart-item-remove:hover { color: var(--danger); }
+.cart-empty {
+  padding: 60px 20px; text-align: center;
+}
+.cart-empty svg { color: var(--green-300); margin-bottom: 16px; }
+.cart-empty h4 { font-family: var(--sans); margin-bottom: 8px; }
+.cart-empty p { font-size: 13px; color: var(--muted); }
+.cart-footer { padding: 24px 28px; border-top: 1px solid var(--line); background: var(--green-50); }
+.cart-total { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
+.cart-total span { font-size: 13px; color: var(--muted); }
+.cart-total strong { font-family: var(--serif); font-size: 24px; color: var(--green-800); }
+.cart-footer .btn { width: 100%; justify-content: center; }
+
+/* ============ CHECKOUT MODAL ============ */
+.modal-wrap {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(11,38,24,.6);
+  backdrop-filter: blur(6px);
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-wrap.open { display: flex; }
+.modal {
+  background: #fff; border-radius: var(--radius-lg);
+  max-width: 520px; width: 100%;
+  max-height: 92vh; overflow-y: auto;
+  padding: 40px;
+}
+.modal h3 { margin-bottom: 8px; }
+.modal .lead { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+.field { margin-bottom: 18px; }
+.field label { display: block; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
+.field input, .field textarea, .field select {
+  width: 100%; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: 10px;
+  font-family: var(--sans); font-size: 14px;
+  transition: border-color .2s;
+}
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--green-500); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.modal-close {
+  position: absolute; top: 16px; right: 16px;
+}
+
+/* ============ ABOUT PAGE ============ */
+.about-hero {
+  background:
+    radial-gradient(800px 400px at 80% 10%, rgba(212,160,31,.14), transparent),
+    linear-gradient(180deg, var(--green-50), #fff);
+  padding: 100px 0 60px;
+}
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-grid h1 { margin-bottom: 20px; }
+.about-grid p { font-size: 16px; color: var(--ink-soft); margin-bottom: 16px; line-height: 1.7; }
+.about-visual {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--green-600), var(--green-800));
+  display: grid; place-items: center;
+  position: relative;
+}
+.about-visual::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(400px 200px at 50% 30%, rgba(212,160,31,.3), transparent);
+}
+.about-visual-inner {
+  text-align: center; color: #fff; position: relative; z-index: 1;
+  padding: 40px;
+}
+.about-visual-inner .logo-mark {
+  width: 88px; height: 88px; font-size: 40px; margin: 0 auto 24px;
+  box-shadow: inset 0 0 0 2px rgba(212,160,31,.5);
+}
+.about-visual-inner .about-logo {
+  width: 180px; height: auto; margin: 0 auto 24px;
+}
+.about-visual-inner h2 { color: #fff; margin-bottom: 10px; }
+.about-visual-inner p { color: rgba(255,255,255,.75); font-size: 14px; }
+.values-section { padding: 80px 0; }
+.values-section h2 { text-align: center; margin-bottom: 50px; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.value-card {
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  transition: all .3s var(--ease);
+}
+.value-card:hover { border-color: var(--green-300); box-shadow: var(--shadow); transform: translateY(-4px); }
+.value-card .icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: var(--green-100); color: var(--green-800);
+  display: grid; place-items: center; margin-bottom: 20px;
+}
+.value-card h4 { font-family: var(--sans); font-size: 17px; margin-bottom: 10px; color: var(--green-900); }
+.value-card p { font-size: 14px; color: var(--muted); }
+
+/* ============ TESTIMONIALS PAGE ============ */
+.testi-page-hero {
+  background: linear-gradient(180deg, var(--green-50), #fff);
+  padding: 100px 0 40px; text-align: center;
+}
+.testi-page-hero h1 { margin-bottom: 14px; }
+.testi-page-hero p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+.testi-page-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+  padding: 60px 0 100px;
+}
+.testi-big {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: 36px;
+  display: flex; flex-direction: column;
+  transition: all .3s var(--ease);
+}
+.testi-big:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+.testi-big .quote-mark {
+  font-family: var(--serif); font-size: 60px; line-height: 1;
+  color: var(--gold-300); margin-bottom: 10px;
+}
+.testi-big blockquote { font-size: 15.5px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 24px; flex: 1; font-style: italic; }
+.testi-big .person { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--line); }
+.testi-big .person .testi-avatar { width: 50px; height: 50px; font-size: 18px; }
+.testi-big .person strong { display: block; color: var(--green-900); font-size: 15px; }
+.testi-big .person span { font-size: 12px; color: var(--muted); }
+.testi-big .person .product-used {
+  margin-left: auto; font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold-600); font-weight: 600;
+}
+
+/* ============ FREE BOTTLE SELECTOR ============ */
+.free-bottle-option {
+  flex: 1; min-width: 100px;
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 12px 16px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  text-align: center;
+  transition: all .2s var(--ease);
+  cursor: pointer;
+}
+.free-bottle-option:hover { border-color: var(--gold-300); }
+.free-bottle-option.active {
+  border-color: var(--gold-500);
+  background: var(--gold-100);
+  box-shadow: 0 4px 12px rgba(212,160,31,.18);
+}
+.fb-label {
+  font-size: 13px; font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--green-900);
+}
+.free-bottle-option.active .fb-label { color: var(--gold-700); }
+.fb-sub {
+  font-size: 11px; color: var(--muted);
+}
+.free-bottle-option.active .fb-sub { color: var(--gold-600); }
+
+/* ============ PRICE OPTION TOGGLE ============ */
+.price-option {
+  flex: 1; min-width: 160px;
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 16px 20px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  text-align: left;
+  transition: all .25s var(--ease);
+  cursor: pointer;
+}
+.price-option:hover { border-color: var(--green-300); }
+.price-option.active {
+  border-color: var(--green-600);
+  background: var(--green-50);
+  box-shadow: 0 4px 16px rgba(31,112,72,.12);
+}
+.po-label {
+  font-size: 12px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted);
+}
+.price-option.active .po-label { color: var(--green-700); }
+.po-price {
+  font-family: var(--serif); font-size: 20px; font-weight: 700;
+  color: var(--green-900);
+}
+.po-unit {
+  font-size: 12px; color: var(--muted);
+}
+.price-option.active .po-unit { color: var(--green-700); }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--green-900); color: rgba(255,255,255,.7);
+  padding: 80px 0 40px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.4fr .6fr .6fr 1fr; gap: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer-brand .logo-mark { background: linear-gradient(135deg, var(--gold-500), var(--gold-600)); color: var(--green-900); }
+.footer-brand .logo-img { height: 72px; width: auto; }
+.footer-brand .logo-text strong { color: #fff; }
+.footer-brand p { color: rgba(255,255,255,.6); font-size: 14px; margin: 20px 0; max-width: 320px; line-height: 1.7; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  display: grid; place-items: center;
+  color: rgba(255,255,255,.7);
+  transition: all .2s;
+}
+.footer-social a:hover { background: var(--gold-500); color: var(--green-900); }
+.footer-col h4 {
+  font-family: var(--sans); font-size: 13px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--gold-400); margin-bottom: 20px; font-weight: 600;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-col a { font-size: 14px; color: rgba(255,255,255,.65); transition: color .2s; }
+.footer-col a:hover { color: var(--gold-300); }
+.footer-contact-item { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; margin-bottom: 14px; }
+.footer-contact-item svg { color: var(--gold-400); flex-shrink: 0; margin-top: 2px; }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 30px; font-size: 13px; color: rgba(255,255,255,.45);
+  flex-wrap: wrap; gap: 14px;
+}
+
+/* ============ WHATSAPP FLOAT ============ */
+.wa-float {
+  position: fixed; bottom: 26px; right: 26px; z-index: 90;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #25D366; color: #fff;
+  display: grid; place-items: center;
+  box-shadow: 0 10px 30px rgba(37,211,102,.4);
+  transition: transform .2s;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float::before {
+  content: ''; position: absolute; inset: -4px; border-radius: 50%;
+  background: #25D366; opacity: .3;
+  animation: waPulse 2s infinite;
+}
+@keyframes waPulse {
+  0% { transform: scale(1); opacity: .3; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* ============ PAGE TRANSITIONS ============ */
+.page { display: none; animation: pageIn .4s var(--ease); }
+.page.active { display: block; }
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .features-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .catalog-grid { grid-template-columns: 1fr; }
+  .pd-grid { grid-template-columns: 1fr; gap: 40px; }
+  .pd-gallery { position: static; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-visual { max-width: 480px; }
+}
+@media (max-width: 720px) {
+  .container { padding: 0 24px; }
+  .section { padding: 64px 0; }
+  .hero { min-height: auto; padding: 40px 0 60px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { max-width: 400px; margin: 0 auto; }
+  .hero-float { display: none; }
+  .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .hero-stat strong { font-size: 22px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .testi-page-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .cta-banner { grid-template-columns: 1fr; padding: 40px 30px; }
+  .catalog-card { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .nav-links { display: none; position: absolute; top: 76px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 20px 24px; gap: 18px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+  .nav-links.open { display: flex; }
+  .dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: var(--green-50); margin-top: 8px; }
+  .menu-toggle { display: block; }
+  .pd-actions { flex-direction: column; }
+  .pd-actions .btn { width: 100%; justify-content: center; }
+  .modal { padding: 28px; }
+  .field-row { grid-template-columns: 1fr; }
+}
+
+/* ============ REVEAL ANIMATION ============ */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+<!-- Navigation -->
+<div class="nav-wrap" id="navWrap">
+  <div class="container nav">
+    <a href="#" class="logo" data-page="home">
+      <img src="images/logo.png" alt="Bima Smarter Future" class="logo-img">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" data-page="home" class="active">Beranda</a></li>
+      <li class="dropdown">
+        <span class="dropdown-toggle">Produk <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></span>
+        <ul class="dropdown-menu">
+          <li><a href="#" data-page="product-elcure">ELCURE <span class="dm-cat">Kesehatan</span></a></li>
+          <li><a href="#" data-page="product-betani">BETANI <span class="dm-cat">Pertanian</span></a></li>
+          <li><a href="#" data-page="product-enter">ENTER <span class="dm-cat">Peternakan</span></a></li>
+          <li><a href="#" data-page="product-bimaco">BIMACO <span class="dm-cat">Kesehatan</span></a></li>
+          <li><a href="#" data-page="catalog" style="color:var(--green-800);font-weight:600">Lihat Semua Produk →</a></li>
+        </ul>
+      </li>
+      <li><a href="#" data-page="about">Tentang Kami</a></li>
+      <li><a href="#" data-page="testimonials">Testimoni</a></li>
+      <li><a href="#" data-page="contact">Kontak</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Keranjang">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</div>
+<!-- ============ HOME PAGE ============ -->
+<div class="page active" id="page-home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <div class="hero-badge"><span class="dot">★</span> 18 Asam Amino dari 65 Jenis Bahan Alami</div>
+        <h1>ELCURE<br>Asam Amino <em>Tetes</em></h1>
+        <p class="hero-sub">Asam amino tetes generasi terbaru. Mengandung 18 asam amino esensial, terbuat dari 65 jenis sayuran, buah-buahan, biji-buahan, dan rempah pilihan. Dilengkapi Vitamin A, D, E, K, Enzim, dan Probiotik.</p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary" data-page="product-elcure">Detail Produk
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#" class="btn btn-outline" data-page="catalog">Lihat Semua Produk</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>18</strong><span>Asam Amino</span></div>
+          <div class="hero-stat"><strong>65</strong><span>Bahan Alami</span></div>
+          <div class="hero-stat"><strong>9</strong><span>Vitamin & Enzim</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal" style="transition-delay:.15s">
+        <img src="images/elcure_v3.png" alt="ELCURE - Produk Unggulan Bima" loading="eager">
+        <div class="hero-float tl">
+          <div class="hero-float-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div><strong>Vitamin & Probiotik</strong><span>Lengkap & Alami</span></div>
+        </div>
+        <div class="hero-float br">
+          <div class="hero-float-icon" style="background:var(--gold-100);color:var(--gold-700)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div><strong>Pencegahan Penyakit</strong><span>Diabetes, Stroke, Jantung</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="features-strip">
+    <div class="container features-grid">
+      <div class="feature-item reveal">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><h4>Kualitas Premium</h4><p>Terbuat dari 65 jenis sayuran, buah, dan rempah pilihan</p></div>
+      </div>
+      <div class="feature-item reveal" style="transition-delay:.1s">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><h4>18 Asam Amino</h4><p>Asam amino esensial lengkap untuk kesehatan sel tubuh</p></div>
+      </div>
+      <div class="feature-item reveal" style="transition-delay:.2s">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div><h4>Vitamin & Probiotik</h4><p>Dilengkapi vitamin A, D, E, K, B, enzim, dan probiotik</p></div>
+      </div>
+      <div class="feature-item reveal" style="transition-delay:.3s">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div><h4>Pencegahan Penyakit</h4><p>Membantu mencegah diabetes, stroke, jantung, dan kanker</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SHOWCASE -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="showcase-head reveal">
+        <span class="eyebrow">Produk Kami</span>
+        <h2>Solusi Lengkap untuk Pertanian,<br>Kesehatan & Peternakan</h2>
+        <p>Produk inovatif berbasis bioteknologi untuk mendukung kehidupan yang lebih sehat dan produktif.</p>
+      </div>
+      <div class="products-grid" id="homeProductsGrid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS PREVIEW -->
+  <section class="section testi-section">
+    <div class="container">
+      <div class="testi-head reveal">
+        <span class="eyebrow">Testimoni</span>
+        <h2>Apa Kata Mereka</h2>
+        <p>Ribuan pelanggan telah merasakan manfaat produk Bima Indonesia.</p>
+      </div>
+      <div class="testi-grid" id="homeTestiGrid">
+        <!-- filled by JS -->
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <a href="#" class="btn btn-outline" data-page="testimonials">Lihat Semua Testimoni</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section-sm">
+    <div class="cta-banner reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--gold-300)">Siap Memulai?</span>
+        <h2 style="margin-top:14px">Bergabung dengan Ribuan Pemenang</h2>
+        <p>Dapatkan produk premium Bima Indonesia dan rasakan perbedaannya. #BeAWinner</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <a href="#" class="btn btn-gold" data-page="catalog">Pesan Sekarang</a>
+        <a href="#" class="btn btn-outline" style="border-color:rgba(255,255,255,.25);color:#fff" data-page="about">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CATALOG PAGE ============ -->
+<div class="page" id="page-catalog">
+  <section class="catalog-hero">
+    <div class="container">
+      <span class="eyebrow" style="justify-content:center">Katalog Produk</span>
+      <h1 style="margin-top:14px">Semua Produk Bima Indonesia</h1>
+      <p>Temukan produk premium untuk kebutuhan pertanian, kesehatan, dan peternakan Anda.</p>
+      <div class="catalog-filters">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="pertanian">Pertanian</button>
+        <button class="filter-btn" data-filter="kesehatan">Kesehatan</button>
+        <button class="filter-btn" data-filter="peternakan">Peternakan</button>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="catalog-grid" id="catalogGrid">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRODUCT DETAIL PAGES ============ -->
+<div class="page" id="page-product-betani"><div class="container pd-wrap" id="pd-betani"></div></div>
+<div class="page" id="page-product-bimaco"><div class="container pd-wrap" id="pd-bimaco"></div></div>
+<div class="page" id="page-product-elcure"><div class="container pd-wrap" id="pd-elcure"></div></div>
+<div class="page" id="page-product-enter"><div class="container pd-wrap" id="pd-enter"></div></div>
+
+<!-- ============ ABOUT PAGE ============ -->
+<div class="page" id="page-about">
+  <section class="about-hero">
+    <div class="container about-grid">
+      <div class="reveal">
+        <span class="eyebrow">Tentang Kami</span>
+        <h1 style="margin-top:14px">PT. Bima Life Future</h1>
+        <p>Bima Smarter Future adalah brand produk premium dari PT. Bima Life Future yang berkomitmen menghadirkan solusi inovatif berbasis bioteknologi untuk masyarakat Indonesia.</p>
+        <p>Dengan tagline <strong>#Be A Winner</strong>, kami percaya bahwa setiap orang berhak meraih keberhasilan — baik petani yang meningkatkan hasil panen, peternak yang mempercepat produksi, maupun individu yang menjaga kesehatan keluarga.</p>
+        <p>Produk kami dikembangkan dengan standar kualitas tinggi, telah terbukti melalui berbagai uji lapangan, dan diakui dengan penghargaan Rekor MURI untuk pencapaian luar biasa di sektor pertanian Indonesia.</p>
+      </div>
+      <div class="about-visual reveal" style="transition-delay:.15s">
+        <div class="about-visual-inner">
+          <img src="images/logo.png" alt="Bima Smarter Future" class="about-logo">
+          <p class="about-tagline">"Be A Winner"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="values-section">
+    <div class="container">
+      <h2>Nilai-Nilai Kami</h2>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h4>Inovasi Berkelanjutan</h4>
+          <p>Kami terus berinovasi mengembangkan produk berbasis bioteknologi untuk solusi pertanian, kesehatan, dan peternakan yang lebih baik.</p>
+        </div>
+        <div class="value-card reveal" style="transition-delay:.1s">
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h4>Kualitas Terjamin</h4>
+          <p>Setiap produk melalui proses quality control ketat dan telah terbukti hasilnyadari pertanian hingga peternakan di seluruh Indonesia.</p>
+        </div>
+        <div class="value-card reveal" style="transition-delay:.2s">
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+          <h4>Berorientasi Pada Pelanggan</h4>
+          <p>Kami berkomitmen memberikan solusi terbaik dan dukungan penuh untuk keberhasilan setiap pelanggan kami.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ TESTIMONIALS PAGE ============ -->
+<div class="page" id="page-testimonials">
+  <section class="testi-page-hero">
+    <div class="container">
+      <span class="eyebrow" style="justify-content:center">Testimoni Pelanggan</span>
+      <h1 style="margin-top:14px">Kisah Sukses Para Pemenang</h1>
+      <p>Dengarkan pengalaman nyata dari pelanggan yang telah merasakan manfaat produk Bima Indonesia.</p>
+    </div>
+  </section>
+  <div class="container">
+    <div class="testi-page-grid" id="testiPageGrid">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ============ CONTACT PAGE ============ -->
+<div class="page" id="page-contact">
+  <section class="section" style="text-align:center">
+    <div class="container">
+      <span class="eyebrow" style="justify-content:center">Hubungi Kami</span>
+      <h1 style="margin-top:14px">Kontak</h1>
+      <p style="margin-top:14px;color:var(--muted);max-width:500px;margin-left:auto;margin-right:auto">Informasi kontak akan segera tersedia. Untuk pertanyaan sementara, silakan hubungi kami melalui WhatsApp.</p>
+      <div style="margin-top:40px">
+        <a href="#" class="btn btn-primary">Hubungi via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="images/logo.png" alt="Bima Smarter Future" class="logo-img">
+        </div>
+        <p>Produk premium bioteknologi untuk pertanian, kesehatan, dan peternakan Indonesia. PT. Bima Life Future — #Be A Winner.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="#" data-page="product-elcure">ELCURE</a></li>
+          <li><a href="#" data-page="product-betani">BETANI</a></li>
+          <li><a href="#" data-page="product-enter">ENTER</a></li>
+          <li><a href="#" data-page="product-bimaco">BIMACO</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Perusahaan</h4>
+        <ul>
+          <li><a href="#" data-page="about">Tentang Kami</a></li>
+          <li><a href="#" data-page="testimonials">Testimoni</a></li>
+          <li><a href="#" data-page="contact">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Alamat kantor akan segera diinformasikan</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>WhatsApp: (segera tersedia)</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5831363e37183a31353931363c37363d2b3139762b303728">[email&#160;protected]</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PT. Bima Life Future. All rights reserved.</span>
+      <span>www.bimaindonesia.shop</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Keranjang Belanja</h3>
+    <button class="cart-close" id="cartClose">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <!-- filled by JS -->
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">Rp 0</strong>
+    </div>
+    <button class="btn btn-primary" id="checkoutBtn" style="width:100%;justify-content:center">Checkout Sekarang</button>
+  </div>
+</div>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="modal-wrap" id="checkoutModal">
+  <div class="modal">
+    <h3>Checkout</h3>
+    <p class="lead">Lengkapi data berikut untuk menyelesaikan pesanan Anda.</p>
+    <form id="checkoutForm">
+      <div class="field"><label>Nama Lengkap</label><input type="text" placeholder="Masukkan nama lengkap" required></div>
+      <div class="field"><label>Nomor WhatsApp</label><input type="tel" placeholder="08xxxxxxxxxx" required></div>
+      <div class="field"><label>Alamat Pengiriman</label><textarea rows="3" placeholder="Masukkan alamat lengkap" required></textarea></div>
+      <div class="field-row">
+        <div class="field"><label>Kota</label><input type="text" placeholder="Kota" required></div>
+        <div class="field"><label>Kode Pos</label><input type="text" placeholder="Kode pos" required></div>
+      </div>
+      <div class="field"><label>Metode Pembayaran</label>
+        <select required>
+          <option value="">Pilih metode pembayaran</option>
+          <option>Transfer Bank (BCA)</option>
+          <option>Transfer Bank (Mandiri)</option>
+          <option>Transfer Bank (BRI)</option>
+          <option>E-Wallet (GoPay/OVO/Dana)</option>
+          <option>COD (Bayar di Tempat)</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:24px">
+        <button type="button" class="btn btn-outline" id="cancelCheckout" style="flex:1;justify-content:center">Batal</button>
+        <button type="submit" class="btn btn-primary" style="flex:1;justify-content:center">Konfirmasi Pesanan</button>
+      </div>
+      <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:14px">* Pembayaran akan dikonfirmasi melalui WhatsApp</p>
+    </form>
+  </div>
+</div>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a href="#" class="wa-float" id="waFloat" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ============ PRODUCT DATA ============
+const PRODUCTS = [
+  {
+    id: 'elcure',
+    name: 'ELCURE',
+    fullName: 'ELCURE — Asam Amino Tetes',
+    tagline: 'Asam Amino Generasi Terbaru',
+    category: 'kesehatan',
+    categoryLabel: 'Kesehatan',
+    size: 'botol (10ml)',
+    price: 230000,
+    image: 'images/elcure_v3.png',
+    badge: 'BPOM RI',
+    badgeGold: false,
+    bpom: 'BPOM RI TR.213665761',
+    desc: 'Elcure adalah Asam Amino yang terbuat dari sayuran, buah-buahan, dan rempah pilihan yang berkualitas tinggi, diproses selama 9 bulan untuk mendapatkan kemurnian dan hasil yang berkhasiat untuk membantu menyembuhkan segala macam penyakit. Dengan kualitas produk dan khasiat yang sangat baik, Elcure akan menjadi produk yang selalu dibutuhkan baik dalam menjaga kesehatan maupun untuk membantu penyembuhan berbagai macam penyakit.',
+    benefits: [
+      'Mengandung 18 Asam Amino esensial lengkap',
+      'Terbuat dari 65 jenis sayuran, buah-buahan, dan rempah pilihan',
+      'Diproses selama 9 bulan untuk kemurnian tinggi',
+      'Membantu memelihara daya tahan tubuh',
+      'Dilengkapi Vitamin A, D, E, K, B2, B6, B9',
+      'Mengandung Enzim dan Probiotik',
+      'Membantu pengobatan dan penyembuhan berbagai penyakit',
+      '20 Penghargaan dari Menteri-Menteri Republik Indonesia'
+    ],
+    aminoAcids: [
+      'Aspartat', 'Glutamat', 'Serin', 'Glisin', 'Threonin', 'Alanin', 'Prolin',
+      'Valin', 'Metionin', 'Isoleusin', 'Leusin', 'Phenilalanin',
+      'Lisin (Lysine HCl)', 'Sistin', 'Tirosin', 'L-carnitine',
+      'L-glutamin', 'Taurin'
+    ],
+    diseases: [
+      'Diabetes', 'Jantung', 'Stroke', 'Lever', 'Kanker', 'Ginjal',
+      'Maag Kronis', 'Kolesterol', 'Asam Urat', 'Trigliserida',
+      'Darah Tinggi', 'Impotensi', 'Tumor, Kista, Myom', 'Lupus',
+      'TBC', 'AIDS/HIV', 'Kesuburan Reproduksi', 'Ambeien',
+      'Asthma', 'Bronchitis', 'Sinusitis, Polip', 'Alergi Kulit',
+      'Dan penyakit kronis lainnya'
+    ],
+    awards: [
+      'Health Minister Republic of Indonesia',
+      'Coordinating Minister for Human Development and Culture of the Republic Indonesia',
+      "Minister of Women's Empowerment and Child Protection of the Republic Indonesia",
+      'Ministry of Manpower and Transmigration Republic of Indonesia',
+      'Coordinating Minister for Economy Republic of Indonesia'
+    ],
+    bundlePricing: {
+      price: 3000000,
+      description: '17 botol'
+    },
+  },
+  {
+    id: 'betani',
+    name: 'BETANI',
+    fullName: 'BETANI — Pupuk Premium Tetes',
+    tagline: 'Booster Pupuk Tetes dengan Bioteknologi',
+    category: 'pertanian',
+    categoryLabel: 'Pertanian',
+    size: 'botol (30ml)',
+    price: 230000,
+    image: 'images/betani_v2.png',
+    badge: 'Best Seller',
+    badgeGold: true,
+    desc: 'Pupuk premium tetes dengan teknologi bioteknologi modern. BETANI membantu menghemat biaya pupuk hingga 50%, meningkatkan hasil panen hingga 300%, mempercepat waktu panen, dan meningkatkan resistensi tanaman. Peraih Rekor MURI Panen Jagung 26,5 Ton.',
+    benefits: [
+      'Mengembalikan kesuburan tanah yang rusak',
+      'Memperbanyak unsur hara dalam tanah',
+      'Memacu pertumbuhan akar, batang, daun, bunga & buah',
+      'Menyeimbangkan unsur hara makro dan mikro',
+      'Hemat biaya pupuk hingga 50%',
+      'Tingkatkan hasil panen hingga 300%'
+    ],
+    achievements: [
+      { label: 'Rekor MURI', value: 'Panen Jagung 26,5 Ton', icon: 'trophy' },
+      { label: 'Hemat Pupuk', value: 'Hingga 50%', icon: 'savings' },
+      { label: 'Peningkatan Hasil', value: 'Hingga 300%', icon: 'growth' },
+      { label: 'Waktu Panen', value: 'Lebih Cepat', icon: 'clock' }
+    ],
+    application: [
+      { plant: 'Tanaman Bunga', dosage: '1 tetes / Liter' },
+      { plant: 'Sayuran & Buah', dosage: '3 tetes / Liter' },
+      { plant: 'Tanaman Batang Kecil', dosage: '5 tetes / Liter' },
+      { plant: 'Tanaman Batang Besar', dosage: '15-20 tetes / Liter' },
+      { plant: 'Kelapa Sawit', dosage: '25-30 tetes / Liter' }
+    ],
+    bundlePricing: {
+      price: 3000000,
+      description: '17 botol'
+    }
+  },
+  {
+    id: 'enter',
+    name: 'ENTER',
+    fullName: 'ENTER — Enzim Ternak',
+    tagline: 'Enzim Ternak untuk Semua Jenis Hewan',
+    category: 'peternakan',
+    categoryLabel: 'Peternakan',
+    size: 'botol (30ml)',
+    price: 230000,
+    image: 'images/enter_v2.png',
+    badge: 'All Livestock',
+    badgeGold: false,
+    desc: 'Enzim ternak premium untuk semua jenis hewan ternak termasuk ikan, ayam, sapi, dan kambing. Formula khusus yang meningkatkan kesehatan, pertumbuhan, dan produktivitas ternak Anda secara signifikan.',
+    benefits: [
+      'Meningkatkan kadar oksigen dalam air & tubuh hewan',
+      'Menjaga kesehatan dan imunitas hewan ternak',
+      'Memacu pertumbuhan daging lebih cepat',
+      'Meningkatkan nafsu makan ternak',
+      'Meningkatkan produksi telur',
+      'Mempercepat waktu panen ternak'
+    ],
+    livestockTypes: [
+      { type: 'Ayam Broiler', icon: '🐔', benefits: ['Pertumbuhan lebih cepat', 'FCR lebih efisien', 'Daging lebih padat', 'Mortalitas turun'] },
+      { type: 'Ikan (Lele, Nila, dll)', icon: '🐟', benefits: ['Pertumbuhan lebih cepat', 'Air lebih bersih', 'Ketahanan penyakit meningkat', 'Panen lebih awal'] },
+      { type: 'Sapi', icon: '🐄', benefits: ['Bobot bertambah cepat', 'Pencernaan lebih baik', 'Kualitas daging meningkat', 'Nafsu makan bertambah'] },
+      { type: 'Kambing & Domba', icon: '🐐', benefits: ['Pertumbuhan optimal', 'Bulu lebih sehat', 'Produksi susu meningkat', 'Lebih aktif dan sehat'] }
+    ],
+    bundlePricing: {
+      price: 3000000,
+      description: '17 botol'
+    }
+  },
+  {
+    id: 'bimaco',
+    name: 'BIMACO',
+    fullName: 'BIMACO — Premium Energy Coffee',
+    tagline: 'Minuman Serbuk Kopi Ginseng + Collagen',
+    category: 'kesehatan',
+    categoryLabel: 'Kesehatan',
+    size: 'box (8 sachet @ 30gr)',
+    price: 345000,
+    image: 'images/bimaco_v3.png',
+    badge: 'For Man & Women',
+    badgeGold: false,
+    desc: 'Kopi Premium BIMACO memiliki keistimewaan tersendiri yang mengandung ramuan alamiah herbal bereaksi paling cepat dan tanpa efek samping jika dibanding produk sejenis lainnya. Kopi BIMACO bukan sekadar kopi yang enak rasanya tetapi juga berkhasiat serta sangat baik untuk membantu meningkatkan dan menjaga kesehatan.',
+    benefits: [
+      'Mengandung Ginseng dan Collagen premium',
+      'Ramuan alamiah herbal tanpa efek samping',
+      'Untuk Pria & Wanita',
+      'Meningkatkan stamina dan vitalitas',
+      'Melancarkan peredaran darah',
+      'Meremajakan kulit dan anti penuaan'
+    ],
+    benefitsMen: [
+      'Meningkatkan Stamina dan Vitalitas pria',
+      'Meningkatkan durasi ketahanan & stamina',
+      'Meningkatkan jumlah dan kualitas SPERMA',
+      'Memperbaiki fungsi organ reproduksi pria',
+      'Mengatasi Disfungsi Ereksi / Impotensi',
+      'Meningkatkan Gairah dan Stamina',
+      'Menurunkan Hipertensi dan Kolesterol',
+      'Mengatasi Ejakulasi dini',
+      'Melancarkan peredaran darah'
+    ],
+    benefitsWomen: [
+      'Mengencangkan kulit dan mencegah penuaan',
+      'Meningkatkan kecerahan kulit',
+      'Melancarkan Sirkulasi Darah Menuju Kulit',
+      'Mengurangi selulit',
+      'Meningkatkan massa otot',
+      'Meremajakan dan mengencangkan Miss V',
+      'Mengatasi keputihan & menghilangkan bau tidak sedap'
+    ],
+    bundlePricing: {
+      price: 3000000,
+      description: '10 box + 2 botol gratis (Elcure/Betani/Enter)'
+    }
+  }
+];
+
+const TESTIMONIALS = [
+  {
+    name: 'Pak Hartono',
+    role: 'Petani Jagung, Merauke',
+    initial: 'H',
+    product: 'BETANI',
+    text: 'Sejak menggunakan BETANI, hasil panen jagung saya meningkat drastis. Bahkan tercatat Rekor MURI 26,5 Ton! Biaya pupuk juga lebih hemat 50%. Sangat luar biasa.',
+    stars: 5,
+  },
+  {
+    name: 'Ibu Sri Wahyuni',
+    role: 'Petani Krisan, Bandung',
+    initial: 'S',
+    product: 'BETANI',
+    text: '30.000 tangkai bunga krisan yang biasanya butuh biaya Rp 500.000 untuk pupuk, sekarang cukup 1 botol BETANI. Hasilnya jauh lebih bagus dari pupuk kimia.',
+    stars: 5,
+  },
+  {
+    name: 'Pak Marthin',
+    role: 'Peternak Ayam, Kroya Timur',
+    initial: 'M',
+    product: 'ENTER',
+    text: 'Dengan ENTER, ayam broiler saya di minggu ke-3 sudah mencapai 1,4 kg — padahal normalnya hanya 900 gram. Mortalitas juga turun dari 3% menjadi di bawah 1%.',
+    stars: 5,
+  },
+  {
+    name: 'Pak Budi Santoso',
+    role: 'Peternak Lele, Jawa Timur',
+    initial: 'B',
+    product: 'ENTER',
+    text: 'Lele saya panen hanya 38 hari, padahal biasanya 45 hari. Pertumbuhannya jauh lebih cepat dan ikan lebih sehat. ENTER benar-benar game changer untuk ternak saya.',
+    stars: 5,
+  },
+  {
+    name: 'Ibu Ratna Dewi',
+    role: 'Ibu Rumah Tangga, Jakarta',
+    initial: 'R',
+    product: 'BIMACO',
+    text: 'Setelah rutin minum BIMACO, kulit terasa lebih kencang dan cerah. Suami juga merasakan stamina yang jauh lebih baik. Kopi enak dengan manfaat luar biasa!',
+    stars: 5,
+  },
+  {
+    name: 'Pak Agus Pratomo',
+    role: 'Karyawan Swasta, Surabaya',
+    initial: 'A',
+    product: 'ELCURE',
+    text: 'Saya rutin konsumsi ELCURE untuk menjaga kesehatan. Tubuh terasa lebih bugar dan tidak mudah sakit. Produk yang sangat berkualitas untuk kesehatan keluarga.',
+    stars: 5,
+  }
+];
+
+// ============ HELPERS ============
+function formatRp(n) {
+  return 'Rp ' + n.toLocaleString('id-ID');
+}
+
+function starsHTML(n) {
+  return '★'.repeat(n) + '☆'.repeat(5-n);
+}
+
+// ============ ROUTER ============
+const pages = ['home','catalog','product-elcure','product-betani','product-enter','product-bimaco','about','testimonials','contact'];
+function goTo(pageId) {
+  pages.forEach(p => {
+    const el = document.getElementById('page-' + p);
+    if (el) el.classList.toggle('active', p === pageId);
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === pageId);
+  });
+  document.getElementById('navLinks').classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(initReveal, 50);
+}
+
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-page]');
+  if (el) {
+    e.preventDefault();
+    goTo(el.dataset.page);
+  }
+});
+
+// ============ RENDER HOME PRODUCTS ============
+function renderHomeProducts() {
+  const grid = document.getElementById('homeProductsGrid');
+  grid.innerHTML = PRODUCTS.map(p => `
+    <div class="product-card reveal" data-cat="${p.category}">
+      <div class="product-img ${p.id === 'bimaco' ? 'bimaco-img' : ''}">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+        <span class="product-tag ${p.badgeGold ? 'gold' : ''}">${p.badge}</span>
+      </div>
+      <div class="product-body">
+        <span class="product-cat">${p.categoryLabel}</span>
+        <h3>${p.fullName}</h3>
+        <p class="product-desc">${p.tagline}. ${p.size}.</p>
+        <div class="product-foot">
+          <span class="product-price">${formatRp(p.price)} <span style="font-size:12px;color:var(--muted)">/ ${p.size}</span></span>
+          <button class="add-cart-btn" data-add="${p.id}" aria-label="Tambah ke keranjang">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============ RENDER CATALOG ============
+function renderCatalog(filter) {
+  const grid = document.getElementById('catalogGrid');
+  const items = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
+  grid.innerHTML = items.map(p => `
+    <div class="catalog-card reveal" data-cat="${p.category}">
+      <div class="catalog-card-img ${p.id === 'bimaco' ? 'bimaco-img' : ''}">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+      </div>
+      <div class="catalog-card-body">
+        <span class="product-cat">${p.categoryLabel}</span>
+        <h3>${p.fullName}</h3>
+        <p>${p.tagline}.</p>
+        <ul class="benefits-list">
+          ${p.benefits.slice(0,4).map(b => `<li>${b}</li>`).join('')}
+        </ul>
+        <div class="catalog-card-foot">
+          <span class="product-price">${formatRp(p.price)} <span style="font-size:12px;color:var(--muted)">/ ${p.size}</span></span>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-outline btn-sm" data-page="product-${p.id}">Detail</button>
+            <button class="btn btn-primary btn-sm" data-add="${p.id}">+ Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============ RENDER PRODUCT DETAIL ============
+function renderProductDetail(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  const el = document.getElementById('pd-' + id);
+  
+  // Special rich content for BIMACO
+  let extraContent = '';
+  if (id === 'bimaco' && p.benefitsMen && p.benefitsWomen) {
+    extraContent = `
+      <div style="margin-top:60px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:30px">
+            <div style="background:linear-gradient(135deg,#1a3a4a,#0f2633);border-radius:var(--radius-lg);padding:36px;color:#fff">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2.5"><circle cx="10" cy="14" r="6"/><path d="M14.5 9.5L19 5M19 5H15M19 5V9"/></svg>
+                <h3 style="color:#fff;font-size:1.4rem">Untuk Pria</h3>
+              </div>
+              <p style="color:rgba(255,255,255,.7);font-size:13px;margin-bottom:20px">Manfaat Kopi BIMACO untuk Pria</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+                ${p.benefitsMen.map(b => `
+                  <li style="display:flex;align-items:flex-start;gap:12px;font-size:14px">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2.5" style="flex-shrink:0;margin-top:1px"><path d="M20 6L9 17l-5-5"/></svg>
+                    <span style="color:rgba(255,255,255,.9)">${b}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+            <div style="background:linear-gradient(135deg,#8b4a5e,#5a2a3a);border-radius:var(--radius-lg);padding:36px;color:#fff">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2.5"><circle cx="12" cy="10" r="6"/><path d="M12 16V21M9 19H15"/></svg>
+                <h3 style="color:#fff;font-size:1.4rem">Untuk Wanita</h3>
+              </div>
+              <p style="color:rgba(255,255,255,.7);font-size:13px;margin-bottom:20px">Manfaat Kopi BIMACO untuk Wanita</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
+                ${p.benefitsWomen.map(b => `
+                  <li style="display:flex;align-items:flex-start;gap:12px;font-size:14px">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2.5" style="flex-shrink:0;margin-top:1px"><path d="M20 6L9 17l-5-5"/></svg>
+                    <span style="color:rgba(255,255,255,.9)">${b}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          </div>
+      </div>
+    `;
+  }
+
+  // Special rich content for ELCURE
+  if (id === 'elcure' && p.aminoAcids && p.diseases) {
+    extraContent = `
+      <div style="margin-top:60px">
+        <div style="background:var(--green-50);border-radius:var(--radius-lg);padding:40px;margin-bottom:30px">
+          <h3 style="margin-bottom:8px">Komposisi 18 Asam Amino</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:20px">Mengandung 18 jenis asam amino esensial yang dibutuhkan tubuh</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px">
+            ${p.aminoAcids.map((aa, i) => `
+              <div style="background:#fff;padding:12px 16px;border-radius:8px;font-size:13.5px;display:flex;align-items:center;gap:10px">
+                <span style="color:var(--gold-600);font-weight:700;font-size:12px;min-width:20px">${i+1}.</span>
+                <span style="color:var(--ink-soft)">${aa}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,var(--green-800),var(--green-900));border-radius:var(--radius-lg);padding:40px;color:#fff;margin-bottom:30px">
+          <h3 style="color:#fff;margin-bottom:8px">Membantu Menyembuhkan</h3>
+          <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:24px">ELCURE membantu pengobatan dan penyembuhan berbagai penyakit</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px">
+            ${p.diseases.map(d => `
+              <div style="display:flex;align-items:center;gap:10px;font-size:14px">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>${d}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div style="background:var(--gold-100);border-radius:var(--radius-lg);padding:40px;border-left:4px solid var(--gold-500)">
+          <h3 style="color:var(--green-900);margin-bottom:8px">20 Penghargaan</h3>
+          <p style="font-size:14px;color:var(--ink-soft);margin-bottom:20px">Penghargaan yang kami dapatkan dari Menteri-Menteri Republik Indonesia</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+            ${p.awards.map(award => `
+              <li style="display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--ink-soft)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-600)" stroke-width="2" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                <span>${award}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+
+  // Special rich content for BETANI
+  if (id === 'betani' && p.achievements) {
+    extraContent = `
+      <div style="margin-top:60px">
+        <div style="background:linear-gradient(135deg,var(--green-700),var(--green-900));border-radius:var(--radius-lg);padding:40px;margin-bottom:30px">
+          <h3 style="color:#fff;margin-bottom:8px">Pencapaian & Keunggulan</h3>
+          <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:24px">BETANI telah terbukti memberikan hasil luar biasa bagi petani Indonesia</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+            ${p.achievements.map(ach => `
+              <div style="background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,.15)">
+                <div style="font-size:32px;margin-bottom:8px">
+                  ${ach.icon === 'trophy' ? '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>' : ''}
+                  ${ach.icon === 'savings' ? '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2"><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2"/><path d="M2 9.5C3 10 3.5 10.5 4 12"/><path d="M15.39 16.5a2 2 0 0 0-3.39 0"/><circle cx="7.5" cy="11.5" r=".5" fill="var(--gold-400)"/><circle cx="10.5" cy="9.5" r=".5" fill="var(--gold-400)"/></svg>' : ''}
+                  ${ach.icon === 'growth' ? '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>' : ''}
+                  ${ach.icon === 'clock' ? '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' : ''}
+                </div>
+                <div style="color:var(--gold-300);font-size:12px;font-weight:600;margin-bottom:4px;letter-spacing:0.5px">${ach.label}</div>
+                <div style="color:#fff;font-size:18px;font-weight:700">${ach.value}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        ${p.application ? `
+          <div style="background:linear-gradient(135deg,var(--green-50),var(--green-100));border-radius:var(--radius-lg);padding:40px;margin-bottom:30px">
+            <h3 style="color:var(--green-900);margin-bottom:8px">Dosis Aplikasi</h3>
+            <p style="font-size:14px;color:var(--muted);margin-bottom:24px">Takaran penggunaan BETANI berdasarkan jenis tanaman</p>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              ${p.application.map(app => `
+                <div style="background:#fff;border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 8px rgba(0,0,0,.05)">
+                  <div style="flex:1;font-size:15px;color:var(--ink-soft);font-weight:500">${app.plant}</div>
+                  <div style="background:var(--green-700);color:#fff;padding:8px 16px;border-radius:8px;font-weight:700;font-size:14px;white-space:nowrap">${app.dosage}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }
+
+  // Special rich content for ENTER
+  if (id === 'enter' && p.livestockTypes) {
+    extraContent = `
+      <div style="margin-top:60px">
+        <div style="background:linear-gradient(135deg,#1a4a3a,#0f2a1a);border-radius:var(--radius-lg);padding:40px">
+          <h3 style="color:#fff;margin-bottom:8px">Untuk Semua Jenis Ternak</h3>
+          <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:24px">ENTER diformulasikan khusus untuk berbagai jenis hewan ternak</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+            ${p.livestockTypes.map(animal => `
+              <div style="background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border-radius:12px;padding:24px;border:1px solid rgba(255,255,255,.12)">
+                <div style="font-size:40px;margin-bottom:12px">${animal.icon}</div>
+                <div style="color:var(--gold-300);font-size:16px;font-weight:700;margin-bottom:16px">${animal.type}</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+                  ${animal.benefits.map(b => `
+                    <li style="display:flex;align-items:flex-start;gap:8px;font-size:13px">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="2.5" style="flex-shrink:0;margin-top:1px"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span style="color:rgba(255,255,255,.9)">${b}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  el.innerHTML = `
+    <a class="pd-back" data-page="catalog">← Kembali ke Katalog</a>
+    <div class="pd-grid">
+      <div class="pd-gallery reveal">
+        <img src="${p.image}" alt="${p.name}">
+      </div>
+      <div class="pd-info reveal" style="transition-delay:.1s">
+        <span class="product-cat">${p.categoryLabel}</span>
+        <h1>${p.fullName}</h1>
+        ${p.bpom ? `<div style="background:var(--green-100);padding:10px 16px;border-radius:8px;font-size:13px;color:var(--green-800);font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:8px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          ${p.bpom}
+        </div>` : ''}
+        <p class="pd-desc">${p.desc}</p>
+        <div class="pd-benefits">
+          <h4>Manfaat Utama</h4>
+          <ul class="benefits-list">
+            ${p.benefits.map(b => `<li>${b}</li>`).join('')}
+          </ul>
+        </div>
+        <div id="pd-price-toggle-${p.id}">
+          ${p.bundlePricing ? `
+          <div style="display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap">
+            <button class="price-option active" data-type="retail" onclick="switchPriceType('${p.id}','retail')">
+              <span class="po-label">Eceran</span>
+              <span class="po-price">${formatRp(p.price)}</span>
+              <span class="po-unit">/ ${p.size}</span>
+            </button>
+            <button class="price-option" data-type="package" onclick="switchPriceType('${p.id}','package')">
+              <span class="po-label">Paket <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold-600)" stroke-width="2" style="vertical-align:-2px"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"/></svg></span>
+              <span class="po-price">${formatRp(p.bundlePricing.price)}</span>
+              <span class="po-unit">${p.bundlePricing.description}</span>
+            </button>
+          </div>` : ''}
+          <div class="pd-price-row">
+            <span class="product-price" id="pd-current-price-${p.id}">${formatRp(p.price)}</span>
+            <span style="font-size:13px;color:var(--muted)" id="pd-current-unit-${p.id}">/ ${p.size}</span>
+          </div>
+        </div>
+        <div class="pd-qty">
+          <label>Jumlah:</label>
+          <div class="qty-ctrl">
+            <button type="button" onclick="changeQty('${p.id}',-1)">−</button>
+            <input type="text" id="pdQty-${p.id}" value="1" readonly>
+            <button type="button" onclick="changeQty('${p.id}',1)">+</button>
+          </div>
+        </div>
+        ${p.id === 'bimaco' && p.bundlePricing ? `
+        <div id="pd-free-bottle-${p.id}" style="display:none;margin-bottom:20px">
+          <label style="display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-700);margin-bottom:8px">Pilih 2 Botol Gratis:</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="free-bottle-option active" data-bottle="elcure" onclick="selectFreeBottle('${p.id}','elcure')">
+              <span class="fb-label">ELCURE</span>
+              <span class="fb-sub">× 2 botol</span>
+            </button>
+            <button class="free-bottle-option" data-bottle="betani" onclick="selectFreeBottle('${p.id}','betani')">
+              <span class="fb-label">BETANI</span>
+              <span class="fb-sub">× 2 botol</span>
+            </button>
+            <button class="free-bottle-option" data-bottle="enter" onclick="selectFreeBottle('${p.id}','enter')">
+              <span class="fb-label">ENTER</span>
+              <span class="fb-sub">× 2 botol</span>
+            </button>
+          </div>
+        </div>
+        ` : ''}
+        <div class="pd-actions">
+          <button class="btn btn-primary" data-add="${p.id}" data-qty-input="pdQty-${p.id}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Tambah ke Keranjang
+          </button>
+          <button class="btn btn-gold" data-add="${p.id}" data-qty-input="pdQty-${p.id}" data-buy-now>Beli Sekarang</button>
+        </div>
+        <div class="pd-meta">
+          <div class="pd-meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div><strong>Gratis Ongkir</strong><span>Untuk area tertentu</span></div>
+          </div>
+          <div class="pd-meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><strong>100% Original</strong><span>Produk asli bergaransi</span></div>
+          </div>
+          <div class="pd-meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <div><strong>Konsultasi Gratis</strong><span>Via WhatsApp</span></div>
+          </div>
+          <div class="pd-meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div><strong>Pengiriman Cepat</strong><span>1-3 hari kerja</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    ${extraContent}
+  `;
+}
+function changeQty(d) {
+  const inp = document.getElementById('pdQty');
+  const v = Math.max(1, parseInt(inp.value||1) + d);
+  inp.value = v;
+}
+
+// ============ PRICE TYPE TOGGLE ============
+const selectedPriceType = {};
+const selectedFreeBottle = {};
+
+function switchPriceType(productId, type) {
+  selectedPriceType[productId] = type;
+  const p = PRODUCTS.find(x => x.id === productId);
+  const container = document.getElementById('pd-price-toggle-' + productId);
+  container.querySelectorAll('.price-option').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.type === type);
+  });
+  const priceEl = document.getElementById('pd-current-price-' + productId);
+  const unitEl = document.getElementById('pd-current-unit-' + productId);
+  if (type === 'package' && p.bundlePricing) {
+    priceEl.textContent = formatRp(p.bundlePricing.price);
+    unitEl.textContent = ' — ' + p.bundlePricing.description;
+    const inp = document.getElementById('pdQty-' + productId);
+    if (inp) inp.value = 1;
+  } else {
+    priceEl.textContent = formatRp(p.price);
+    unitEl.textContent = '/ ' + p.size;
+  }
+  // Show/hide free bottle selector for BIMACO
+  if (productId === 'bimaco') {
+    const freeBottleEl = document.getElementById('pd-free-bottle-' + productId);
+    if (freeBottleEl) {
+      freeBottleEl.style.display = type === 'package' ? 'block' : 'none';
+    }
+  }
+}
+
+function changeQty(productId, d) {
+  const inp = document.getElementById('pdQty-' + productId);
+  const v = Math.max(1, parseInt(inp.value||1) + d);
+  inp.value = v;
+}
+
+function selectFreeBottle(productId, bottleType) {
+  selectedFreeBottle[productId] = bottleType;
+  const container = document.getElementById('pd-free-bottle-' + productId);
+  container.querySelectorAll('.free-bottle-option').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.bottle === bottleType);
+  });
+}
+
+// ============ RENDER TESTIMONIALS ============
+function renderHomeTestimonials() {
+  const grid = document.getElementById('homeTestiGrid');
+  grid.innerHTML = TESTIMONIALS.slice(0,3).map(t => `
+    <div class="testi-card reveal">
+      <div class="testi-stars">${starsHTML(t.stars)}</div>
+      <p class="testi-text">"${t.text}"</p>
+      <div class="testi-person">
+        <div class="testi-avatar">${t.initial}</div>
+        <div><strong>${t.name}</strong><span>${t.role}</span></div>
+      </div>
+    </div>
+  `).join('');
+}
+function renderTestimonialsPage() {
+  const grid = document.getElementById('testiPageGrid');
+  grid.innerHTML = TESTIMONIALS.map(t => `
+    <div class="testi-big reveal">
+      <div class="quote-mark">"</div>
+      <blockquote>${t.text}</blockquote>
+      <div class="person">
+        <div class="testi-avatar">${t.initial}</div>
+        <div><strong>${t.name}</strong><span>${t.role}</span></div>
+        <span class="product-used">${t.product}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============ CART ============
+let cart = [];
+const BUNDLE_QTY = { elcure: 17, betani: 17, enter: 17, bimaco: 10 };
+
+function addToCart(productId, qty) {
+  qty = qty || 1;
+  const p = PRODUCTS.find(x => x.id === productId);
+  if (!p) return;
+  const type = selectedPriceType[productId] || 'retail';
+  const cartKey = productId + '-' + type;
+  const existing = cart.find(c => c.cartKey === cartKey);
+
+  if (type === 'package' && p.bundlePricing) {
+    const bundleQty = BUNDLE_QTY[productId] || 1;
+    const freeBottle = productId === 'bimaco' ? (selectedFreeBottle[productId] || 'elcure') : null;
+    const updatedCartKey = productId + '-' + type + (freeBottle ? '-' + freeBottle : '');
+    const updatedExisting = cart.find(c => c.cartKey === updatedCartKey);
+    
+    if (updatedExisting) {
+      updatedExisting.qty += qty;
+      updatedExisting.units += bundleQty * qty;
+    } else {
+      cart.push({ 
+        cartKey: updatedCartKey, 
+        id: productId, 
+        qty, 
+        units: bundleQty * qty, 
+        type: 'package', 
+        pricePerUnit: p.bundlePricing.price,
+        freeBottle: freeBottle
+      });
+    }
+  } else {
+    if (existing) {
+      existing.qty += qty;
+      existing.units += qty;
+    } else {
+      cart.push({ cartKey, id: productId, qty, units: qty, type: 'retail', pricePerUnit: p.price });
+    }
+  }
+  updateCart();
+  openCart();
+}
+function removeFromCart(cartKey) {
+  cart = cart.filter(c => c.cartKey !== cartKey);
+  updateCart();
+}
+function changeCartQty(cartKey, delta) {
+  const item = cart.find(c => c.cartKey === cartKey);
+  if (!item) return;
+  const newQty = Math.max(1, item.qty + delta);
+  item.qty = newQty;
+  if (item.type === 'package') {
+    const bundleQty = BUNDLE_QTY[item.id] || 1;
+    item.units = bundleQty * newQty;
+  } else {
+    item.units = newQty;
+  }
+  updateCart();
+}
+function updateCart() {
+  const count = cart.reduce((s,c) => s + c.units, 0);
+  const total = cart.reduce((s,c) => s + (c.pricePerUnit * c.qty), 0);
+  document.getElementById('cartCount').textContent = count;
+  document.getElementById('cartTotal').textContent = formatRp(total);
+  const footer = document.getElementById('cartFooter');
+  const itemsEl = document.getElementById('cartItems');
+  if (cart.length === 0) {
+    footer.style.display = 'none';
+    itemsEl.innerHTML = `
+      <div class="cart-empty">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <h4>Keranjang Kosong</h4>
+        <p>Yuk, mulai belanja produk premium kami!</p>
+      </div>
+    `;
+  } else {
+    footer.style.display = 'block';
+    itemsEl.innerHTML = cart.map(c => {
+      const p = PRODUCTS.find(x => x.id === c.id);
+      const isPackage = c.type === 'package';
+      const typeLabel = isPackage ? 'Paket' : 'Eceran';
+      const typeColor = isPackage ? 'var(--gold-600)' : 'var(--green-700)';
+      const typeBg = isPackage ? 'var(--gold-100)' : 'var(--green-100)';
+      const unitInfo = isPackage
+        ? (c.id === 'bimaco' ? c.units + ' box + 2 botol ' + (c.freeBottle ? c.freeBottle.toUpperCase() : 'ELCURE') : c.units + ' botol')
+        : c.units + ' ' + p.size;
+      return `
+        <div class="cart-item">
+          <div class="cart-item-img">
+            <img src="${p.image}" alt="${p.name}">
+          </div>
+          <div class="cart-item-info">
+            <h4>${p.name}</h4>
+            <span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:${typeBg};color:${typeColor};margin-bottom:4px">${typeLabel}</span>
+            <span style="display:block;font-size:12px;color:var(--muted)">${isPackage ? c.qty + ' paket' : ''} ${isPackage ? '· ' : ''}${unitInfo}</span>
+            <div class="cart-item-qty">
+              <button onclick="changeCartQty('${c.cartKey}',-1)">−</button>
+              <span>${c.qty}</span>
+              <button onclick="changeCartQty('${c.cartKey}',1)">+</button>
+            </div>
+          </div>
+          <div class="cart-item-right">
+            <strong>${formatRp(c.pricePerUnit * c.qty)}</strong>
+            <button class="cart-item-remove" onclick="removeFromCart('${c.cartKey}')">Hapus</button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+}
+function openCart() {
+  document.getElementById('cartOverlay').classList.add('open');
+  document.getElementById('cartDrawer').classList.add('open');
+}
+function closeCart() {
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.getElementById('cartDrawer').classList.remove('open');
+}
+document.getElementById('cartBtn').addEventListener('click', openCart);
+document.getElementById('cartClose').addEventListener('click', closeCart);
+document.getElementById('cartOverlay').addEventListener('click', closeCart);
+
+// ============ CHECKOUT ============
+document.getElementById('checkoutBtn').addEventListener('click', () => {
+  closeCart();
+  document.getElementById('checkoutModal').classList.add('open');
+});
+document.getElementById('cancelCheckout').addEventListener('click', () => {
+  document.getElementById('checkoutModal').classList.remove('open');
+});
+document.getElementById('checkoutForm').addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('checkoutModal').classList.remove('open');
+  cart = [];
+  updateCart();
+  alert('Pesanan Anda telah diterima! Tim kami akan menghubungi Anda melalui WhatsApp untuk konfirmasi pembayaran. Terima kasih!');
+});
+
+// ============ ADD TO CART DELEGATION ============
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-add]');
+  if (!btn) return;
+  const qtyInput = btn.dataset.qtyInput ? document.getElementById(btn.dataset.qtyInput) : null;
+  const qty = qtyInput ? parseInt(qtyInput.value) : 1;
+  addToCart(btn.dataset.add, qty);
+  if (btn.hasAttribute('data-buy-now')) {
+    closeCart();
+    document.getElementById('checkoutModal').classList.add('open');
+  }
+});
+
+// ============ CATALOG FILTER ============
+document.addEventListener('click', e => {
+  if (!e.target.classList.contains('filter-btn')) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  renderCatalog(e.target.dataset.filter);
+  setTimeout(initReveal, 50);
+});
+
+// ============ MOBILE MENU ============
+document.getElementById('menuToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// ============ NAV SCROLL ============
+window.addEventListener('scroll', () => {
+  document.getElementById('navWrap').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ============ REVEAL ANIMATION ============
+function initReveal() {
+  const els = document.querySelectorAll('.reveal:not(.in)');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
+}
+
+// ============ INIT ============
+renderHomeProducts();
+renderCatalog('all');
+renderHomeTestimonials();
+renderTestimonialsPage();
+PRODUCTS.forEach(p => renderProductDetail(p.id));
+selectedFreeBottle['bimaco'] = 'elcure';
+updateCart();
+initReveal();
+</script>
+</body>
+</html>
