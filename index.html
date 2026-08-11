@@ -1189,13 +1189,52 @@ p { color: var(--ink-soft); }
       <div class="field"><label>Nomor WhatsApp</label><input type="tel" id="checkoutPhone" placeholder="08xxxxxxxxxx" required></div>
       <div class="field"><label>Alamat Pengiriman</label><textarea id="checkoutAddress" rows="3" placeholder="Masukkan alamat lengkap" required></textarea></div>
       <div class="field-row">
-        <div class="field"><label>Kota</label><input type="text" id="checkoutCity" placeholder="Kota" required></div>
+        <div class="field"><label>Kota / Wilayah Tujuan (JNE)</label>
+          <select id="checkoutCity" required>
+            <option value="">Pilih Kota / Wilayah</option>
+            <option value="Jakarta" data-ongkir="9000">DKI Jakarta (Rp 9.000/kg)</option>
+            <option value="Bodetabek" data-ongkir="11000">Bodetabek (Bogor/Depok/Tangerang/Bekasi) (Rp 11.000/kg)</option>
+            <option value="Bandung" data-ongkir="13000">Bandung (Rp 13.000/kg)</option>
+            <option value="JawaBarat" data-ongkir="16000">Kota Lain di Jawa Barat (Rp 16.000/kg)</option>
+            <option value="Semarang" data-ongkir="19000">Semarang (Rp 19.000/kg)</option>
+            <option value="YogyakartaSolo" data-ongkir="19000">Yogyakarta / Solo (Rp 19.000/kg)</option>
+            <option value="JawaTengah" data-ongkir="21000">Kota Lain di Jawa Tengah / DIY (Rp 21.000/kg)</option>
+            <option value="Surabaya" data-ongkir="21000">Surabaya (Rp 21.000/kg)</option>
+            <option value="Malang" data-ongkir="23000">Malang (Rp 23.000/kg)</option>
+            <option value="JawaTimur" data-ongkir="24000">Kota Lain di Jawa Timur (Rp 24.000/kg)</option>
+            <option value="Bali" data-ongkir="26000">Bali / Denpasar (Rp 26.000/kg)</option>
+            <option value="Sumatera" data-ongkir="28000">Sumatera (Medan/Palembang/dll) (Rp 28.000/kg)</option>
+            <option value="Kalimantan" data-ongkir="35000">Kalimantan (Rp 35.000/kg)</option>
+            <option value="Sulawesi" data-ongkir="39000">Sulawesi (Makassar/Manado/dll) (Rp 39.000/kg)</option>
+            <option value="IndonesiaTimur" data-ongkir="45000">Papua / Maluku / Nusa Tenggara (Rp 45.000/kg)</option>
+          </select>
+        </div>
         <div class="field"><label>Kode Pos</label><input type="text" id="checkoutPostalCode" placeholder="Kode pos" required></div>
       </div>
       <div class="field"><label>Metode Pembayaran</label>
         <select required disabled>
           <option value="QRIS" selected>QR Code / QRIS</option>
         </select>
+      </div>
+      <!-- Rincian Biaya -->
+      <div class="checkout-summary" style="background:var(--green-50);padding:16px;border-radius:8px;margin-top:20px;font-size:14px;border:1px solid var(--green-200)">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+          <span>Subtotal Produk</span>
+          <strong id="checkoutSubtotal">Rp 0</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+          <span>Total Berat</span>
+          <span id="checkoutWeight">0 kg</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+          <span>Ongkos Kirim (JNE)</span>
+          <strong id="checkoutShipping">Rp 0</strong>
+        </div>
+        <hr style="border:none;border-top:1px dashed var(--green-200);margin:12px 0">
+        <div style="display:flex;justify-content:space-between;font-size:16px;color:var(--green-900)">
+          <span>Total Pembayaran</span>
+          <strong id="checkoutTotal" style="color:var(--green-800);font-size:18px">Rp 0</strong>
+        </div>
       </div>
       <div style="display:flex;gap:12px;margin-top:24px">
         <button type="button" class="btn btn-outline" id="cancelCheckout" style="flex:1;justify-content:center">Batal</button>
@@ -1978,10 +2017,55 @@ document.getElementById('cartBtn').addEventListener('click', openCart);
 document.getElementById('cartClose').addEventListener('click', closeCart);
 document.getElementById('cartOverlay').addEventListener('click', closeCart);
 
-// ============ CHECKOUT ============
+// ============ CHECKOUT LOGIC ============
+function calculateCartWeight() {
+  let totalWeightGrams = 0;
+  cart.forEach(item => {
+    if (item.type === 'package') {
+      if (item.id === 'bimaco') {
+        totalWeightGrams += 3100 * item.qty;
+      } else if (item.id === 'elcure') {
+        totalWeightGrams += 850 * item.qty;
+      } else {
+        totalWeightGrams += 1360 * item.qty;
+      }
+    } else {
+      if (item.id === 'bimaco') {
+        totalWeightGrams += 300 * item.qty;
+      } else if (item.id === 'elcure') {
+        totalWeightGrams += 50 * item.qty;
+      } else {
+        totalWeightGrams += 80 * item.qty;
+      }
+    }
+  });
+  const kg = Math.ceil(totalWeightGrams / 1000);
+  return Math.max(1, kg);
+}
+
+function updateCheckoutTotals() {
+  const subtotal = cart.reduce((s,c) => s + (c.pricePerUnit * c.qty), 0);
+  const weightKg = calculateCartWeight();
+  
+  const citySelect = document.getElementById('checkoutCity');
+  const selectedOption = citySelect.options[citySelect.selectedIndex];
+  const rate = selectedOption ? (parseInt(selectedOption.getAttribute('data-ongkir')) || 0) : 0;
+  
+  const shippingCost = rate * weightKg;
+  const grandTotal = subtotal + shippingCost;
+  
+  document.getElementById('checkoutSubtotal').textContent = formatRp(subtotal);
+  document.getElementById('checkoutWeight').textContent = weightKg + ' kg';
+  document.getElementById('checkoutShipping').textContent = shippingCost > 0 ? formatRp(shippingCost) : 'Rp 0';
+  document.getElementById('checkoutTotal').textContent = formatRp(grandTotal);
+}
+
+document.getElementById('checkoutCity').addEventListener('change', updateCheckoutTotals);
+
 document.getElementById('checkoutBtn').addEventListener('click', () => {
   closeCart();
   document.getElementById('checkoutModal').classList.add('open');
+  updateCheckoutTotals();
 });
 document.getElementById('cancelCheckout').addEventListener('click', () => {
   document.getElementById('checkoutModal').classList.remove('open');
@@ -1998,10 +2082,16 @@ document.getElementById('checkoutForm').addEventListener('submit', async e => {
   const name = document.getElementById('checkoutName').value;
   const phone = document.getElementById('checkoutPhone').value;
   const address = document.getElementById('checkoutAddress').value;
-  const city = document.getElementById('checkoutCity').value;
+  const citySelect = document.getElementById('checkoutCity');
+  const city = citySelect.value;
+  const selectedOption = citySelect.options[citySelect.selectedIndex];
+  const rate = selectedOption ? (parseInt(selectedOption.getAttribute('data-ongkir')) || 0) : 0;
   const postalCode = document.getElementById('checkoutPostalCode').value;
 
-  const total = cart.reduce((s,c) => s + (c.pricePerUnit * c.qty), 0);
+  const subtotal = cart.reduce((s,c) => s + (c.pricePerUnit * c.qty), 0);
+  const weightKg = calculateCartWeight();
+  const shippingCost = rate * weightKg;
+  const grandTotal = subtotal + shippingCost;
   const orderId = 'INV-' + Date.now();
 
   try {
@@ -2014,7 +2104,7 @@ document.getElementById('checkoutForm').addEventListener('submit', async e => {
       },
       body: JSON.stringify({
         order_id: orderId,
-        amount: total,
+        amount: grandTotal,
         currency: 'IDR',
         expires_in_hours: 24,
         success_return_url: window.location.href,
@@ -2023,7 +2113,9 @@ document.getElementById('checkoutForm').addEventListener('submit', async e => {
         customer_phone: phone,
         customer_address: address,
         customer_city: city,
-        customer_postal_code: postalCode
+        customer_postal_code: postalCode,
+        shipping_cost: shippingCost,
+        weight_kg: weightKg
       })
     });
 
@@ -2059,6 +2151,7 @@ document.addEventListener('click', e => {
   if (btn.hasAttribute('data-buy-now')) {
     closeCart();
     document.getElementById('checkoutModal').classList.add('open');
+    updateCheckoutTotals();
   }
 });
 
