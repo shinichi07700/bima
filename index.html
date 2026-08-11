@@ -1279,8 +1279,8 @@ const PRODUCTS = [
       'Coordinating Minister for Economy Republic of Indonesia'
     ],
     bundlePricing: {
-      price: 3000000,
-      description: '17 botol'
+      price: 3650000,
+      description: '21 botol'
     },
   },
   {
@@ -1318,8 +1318,8 @@ const PRODUCTS = [
       { plant: 'Kelapa Sawit', dosage: '25-30 tetes / Liter' }
     ],
     bundlePricing: {
-      price: 3000000,
-      description: '17 botol'
+      price: 3650000,
+      description: '21 botol'
     }
   },
   {
@@ -1350,8 +1350,8 @@ const PRODUCTS = [
       { type: 'Kambing & Domba', icon: '🐐', benefits: ['Pertumbuhan optimal', 'Bulu lebih sehat', 'Produksi susu meningkat', 'Lebih aktif dan sehat'] }
     ],
     bundlePricing: {
-      price: 3000000,
-      description: '17 botol'
+      price: 3650000,
+      description: '21 botol'
     }
   },
   {
@@ -1395,10 +1395,7 @@ const PRODUCTS = [
       'Meremajakan dan mengencangkan Miss V',
       'Mengatasi keputihan & menghilangkan bau tidak sedap'
     ],
-    bundlePricing: {
-      price: 3000000,
-      description: '10 box + 2 botol gratis (Elcure/Betani/Enter)'
-    }
+
   }
 ];
 
@@ -1877,7 +1874,7 @@ function renderTestimonialsPage() {
 
 // ============ CART ============
 let cart = [];
-const BUNDLE_QTY = { elcure: 17, betani: 17, enter: 17, bimaco: 10 };
+const BUNDLE_QTY = { elcure: 21, betani: 21, enter: 21 };
 
 function addToCart(productId, qty) {
   qty = qty || 1;
@@ -2005,20 +2002,13 @@ function calculateCartWeight() {
     const isPackage = (item.type === 'package');
     if (item.id === 'elcure') {
       // Elcure 10ml = 15gr
-      totalWeightGrams += (isPackage ? 17 : 1) * 15 * item.qty;
+      totalWeightGrams += (isPackage ? 21 : 1) * 15 * item.qty;
     } else if (item.id === 'betani' || item.id === 'enter') {
       // Betani/Enter 30ml = 40gr
-      totalWeightGrams += (isPackage ? 17 : 1) * 40 * item.qty;
+      totalWeightGrams += (isPackage ? 21 : 1) * 40 * item.qty;
     } else if (item.id === 'bimaco') {
       // Bimaco box = 250gr (30gr x 8 sachets + box)
-      // Bimaco package has 10 boxes + 2 free bottles (default free bottle is Elcure 15g or Betani/Enter 40g)
-      if (isPackage) {
-        const freeBottleId = item.freeBottle || 'elcure';
-        const freeBottleWeight = (freeBottleId === 'elcure') ? 15 : 40;
-        totalWeightGrams += (10 * 250 + 2 * freeBottleWeight) * item.qty;
-      } else {
-        totalWeightGrams += 250 * item.qty;
-      }
+      totalWeightGrams += 250 * item.qty;
     }
   });
   // Minimum weight is 1 kg, and round up
