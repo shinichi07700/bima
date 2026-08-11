@@ -2119,7 +2119,7 @@ document.getElementById('checkoutForm').addEventListener('submit', async e => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Api-Key': 'ddb90d5f8ffe1e1861154778707a95d02b080b92621f3c5e2085ed6e11332db6'
+        'X-Api-Key': 'fcbfcfe318fac070133ff553883895c056d701299d46de11b717a4a5a0dbb40c'
       },
       body: JSON.stringify({
         order_id: orderId,
@@ -2128,6 +2128,7 @@ document.getElementById('checkoutForm').addEventListener('submit', async e => {
         expires_in_hours: 24,
         success_return_url: window.location.href,
         cancel_return_url: window.location.href,
+        payment_method_type_code: 'QRIS',
         customer_name: name,
         customer_phone: phone,
         customer_address: address,
