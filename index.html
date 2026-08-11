@@ -2152,6 +2152,41 @@ document.getElementById('checkoutForm').addEventListener('submit', async e => {
 
     const data = await response.json();
     if (data && data.payment_link_url) {
+      // Push order details to n8n webhook
+      try {
+        await fetch('https://n8n-bag8dbxrrwei.n8x.web.id/webhook/bima_invoice', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            order_id: orderId,
+            payment_id: data.payment_id,
+            payment_link_url: data.payment_link_url,
+            amount: grandTotal,
+            subtotal: subtotal,
+            shipping_cost: shippingCost,
+            weight_kg: weightKg,
+            currency: 'IDR',
+            customer_name: name,
+            customer_phone: phone,
+            customer_address: address,
+            customer_city: city,
+            customer_postal_code: postalCode,
+            items: cart.map(c => ({
+              id: c.id,
+              type: c.type,
+              qty: c.qty,
+              units: c.units,
+              price: c.pricePerUnit,
+              freeBottle: c.freeBottle
+            }))
+          })
+        });
+      } catch (webhookErr) {
+        console.error('Failed to trigger n8n webhook:', webhookErr);
+      }
+
       cart = [];
       updateCart();
       document.getElementById('checkoutModal').classList.remove('open');
