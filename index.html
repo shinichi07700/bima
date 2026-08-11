@@ -1734,6 +1734,11 @@ function renderProductDetail(id) {
             <span class="product-price" id="pd-current-price-${p.id}">${formatRp(p.price)}</span>
             <span style="font-size:13px;color:var(--muted)" id="pd-current-unit-${p.id}">/ ${p.size}</span>
           </div>
+          ${p.bundlePricing && p.id !== 'bimaco' ? `
+          <div id="pd-promo-${p.id}" style="display:none;background:var(--gold-100);border:1px solid var(--gold-300);padding:10px 16px;border-radius:8px;font-size:13px;color:var(--gold-700);font-weight:600;margin-top:14px;align-items:center;gap:8px">
+            <span>🎁 Promo Kemerdekaan: Beli 1 Paket, Gratis Ekstra 3 Botol! (Total 24 Botol)</span>
+          </div>
+          ` : ''}
         </div>
         <div class="pd-qty">
           <label>Jumlah:</label>
@@ -1820,6 +1825,11 @@ function switchPriceType(productId, type) {
     priceEl.textContent = formatRp(p.price);
     unitEl.textContent = '/ ' + p.size;
   }
+  // Show/hide promo info box
+  const promoEl = document.getElementById('pd-promo-' + productId);
+  if (promoEl) {
+    promoEl.style.display = type === 'package' ? 'flex' : 'none';
+  }
   // Show/hide free bottle selector for BIMACO
   if (productId === 'bimaco') {
     const freeBottleEl = document.getElementById('pd-free-bottle-' + productId);
@@ -1874,7 +1884,7 @@ function renderTestimonialsPage() {
 
 // ============ CART ============
 let cart = [];
-const BUNDLE_QTY = { elcure: 21, betani: 21, enter: 21 };
+const BUNDLE_QTY = { elcure: 24, betani: 24, enter: 24 };
 
 function addToCart(productId, qty) {
   qty = qty || 1;
@@ -1957,7 +1967,7 @@ function updateCart() {
       const typeColor = isPackage ? 'var(--gold-600)' : 'var(--green-700)';
       const typeBg = isPackage ? 'var(--gold-100)' : 'var(--green-100)';
       const unitInfo = isPackage
-        ? (c.id === 'bimaco' ? c.units + ' box + 2 botol ' + (c.freeBottle ? c.freeBottle.toUpperCase() : 'ELCURE') : c.units + ' botol')
+        ? (c.id === 'bimaco' ? c.units + ' box + 2 botol ' + (c.freeBottle ? c.freeBottle.toUpperCase() : 'ELCURE') : c.units + ' botol (Promo: 21 + 3 gratis)')
         : c.units + ' ' + p.size;
       return `
         <div class="cart-item">
